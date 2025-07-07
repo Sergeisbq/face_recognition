@@ -170,7 +170,8 @@ const FaceRecognitionAuto = () => {
       "רון עוזרי",
       "ענבל לאור צדיק",
       "שרונה חבסוב",
-      "בת אל גטו"
+      "בת אל גטו",
+      "סיגלית רובין פלור"
     ];
     const loaded = await Promise.all(
       labels.map(async (label) => {
@@ -288,7 +289,7 @@ const FaceRecognitionAuto = () => {
   return (
     <div className="flex items-center justify-center min-h-screen p-8 bg-gray-100">
       <div className="relative w-full max-w-2xl p-6 bg-white border border-gray-300 shadow-xl rounded-3xl">
-        <h2 className="mb-4 text-3xl font-semibold text-center text-gray-800">Face Match Scanner</h2>
+        <h2 className="mb-4 text-3xl font-semibold text-center text-gray-800">רישום נוכחות על ידי סריקת הפנים</h2>
 
         <div className="relative">
           <video ref={videoRef} autoPlay muted playsInline width="auto" height="600" className="shadow rounded-xl" />
@@ -340,7 +341,7 @@ const FaceRecognitionAuto = () => {
           <FaceApi video={videoRef.current} userFaceInfo={userFaceInfo} />
         </div>
 
-        {!modelsLoaded && <p className="mt-4 text-center text-gray-600 animate-pulse">Loading models...</p>}
+        {!modelsLoaded && <p className="mt-4 text-center text-gray-600 animate-pulse">...טוען</p>}
       </div>
     </div>
   );

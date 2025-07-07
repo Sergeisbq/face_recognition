@@ -12,8 +12,6 @@ const FaceRecognitionAuto = () => {
   const [age, setAge] = useState(null);
   const [gender, setGender] = useState(null);
 
-  console.log(age, gender);
-
   const videoRef = useRef(null);
   const faceApiCanvasRef = useRef(null);
   const mediaPipeCanvasRef = useRef(null);
@@ -27,8 +25,6 @@ const FaceRecognitionAuto = () => {
     age: 0,
     gender: 0
   });
-
-  //   console.log(userFaceInfo?.current);
 
   useEffect(() => {
     const loadModels = async () => {
